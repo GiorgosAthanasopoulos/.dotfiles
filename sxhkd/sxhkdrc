@@ -28,7 +28,7 @@ super + alt + {q, Q, r, R}
 
 # set node to fullscreen
 super + alt + {f, F}
-	bspc node -t {fullscreen}
+	bspc node -t \~fullscreen
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
