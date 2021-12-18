@@ -14,7 +14,7 @@ super + {f, F}
 super + {q, Q}
 	bspc node -{c,k}
 
-# open rofi
+# open dmenu
 super + @space
 	dmenu_run
 
@@ -41,3 +41,19 @@ super + Tab
 # hide/unhide all windows in workspace
 super + {h, H}
      ~/.local/bin/winhide
+
+# open spotify
+super + {m, M}
+    spotify
+
+# focus the node in the given direction
+super + shift { Left, Down, Up, Right }
+    bspc node -s {west,south,north,east}
+
+# opens code
+super + {c, C}
+    code
+
+# opens discord
+super + {d, D}
+    discord
