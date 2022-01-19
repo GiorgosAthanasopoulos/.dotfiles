@@ -1,0 +1,94 @@
+# launch firefox
+super + {b, B}
+	firefox
+
+# launch thunar 
+super + {f, F}
+	thunar
+
+# launch spotify
+super + {m, M}
+	spotify
+
+# launch dmenu
+super + {r, R}
+	dmenu_run
+	
+# launch archlinux-logout
+super + {p, P}
+	arcolinux-logout
+
+# launch alacritty
+super + {t, T}
+	alacritty
+
+# restart sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# set focused node to fullscreen
+super + alt + {f, f}
+	bspc node --state \~fullscreen
+
+# kill focused node
+super + {q, Q}
+	bspc node -c
+
+# alt tab (in windows)
+alt + Tab
+	$HOME/.config/bspwm/sxhkd/alt_tab
+
+# focus to desktop
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+# bspwm window padding
+super + bracket{left,right}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5 ))
+
+# change focused node type
+super + space
+	bspc node -t {tiled, pseudo_tiled, floating, fullscreen}
+
+# move window
+super + alt + {_,shift+}{Left, Down, Up, Right}
+	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+
+# restart bspwm
+super + alt + {r, R}
+	~/.config/bspwm/bspwmrc
+
+# swap focused node spot in screen
+super + {_,shift+}{Left, Down, Up, Right}
+	bspc node --{focus,swap} {west,south,north,east}
+
+# send focused node to desktop
+super + shift + {1-9,0}
+	bspc node -d '{1-9,0}'
+
+# launch code
+super + {c, C}
+	code
+
+# launch discord
+super + {d, D}
+	discord
+
+# set layout to us
+alt + shift + Left
+	setxkbmap us
+
+# set layout to gr
+alt + shift + Right
+	setxkbmap gr
+
+# hide-unhide focused window
+super + {h, H}
+	$HOME/.local/bin/winhide
+
+# resize windows
+super + alt + {h,j,k,l}
+	$HOME/.config/bspwm/sxhkd/resize expand {west,south,north,east} 50
+
+super + alt + shift + {h,j,k,l}
+	$HOME/.config/bspwm/sxhkd/resize contract {west,south,north,east} 50
