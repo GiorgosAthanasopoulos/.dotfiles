@@ -1,3 +1,7 @@
+# launch unity
+super + {u, U}
+	$HOME/Downloads/UnityHub.AppImage
+
 # launch firefox
 super + {b, B}
 	firefox
@@ -34,6 +38,9 @@ super + alt + {f, f}
 super + {q, Q}
 	bspc node -c
 
+super + shift + {q, Q}
+	bspc node -k
+
 # alt tab (in windows)
 alt + Tab
 	$HOME/.config/bspwm/sxhkd/alt_tab
@@ -68,7 +75,7 @@ super + shift + {1-9,0}
 
 # launch code
 super + {c, C}
-	code
+	subl
 
 # launch discord
 super + {d, D}
@@ -92,3 +99,7 @@ super + alt + {h,j,k,l}
 
 super + alt + shift + {h,j,k,l}
 	$HOME/.config/bspwm/sxhkd/resize contract {west,south,north,east} 50
+
+# launch steam
+super + {s, S}
+	steam
