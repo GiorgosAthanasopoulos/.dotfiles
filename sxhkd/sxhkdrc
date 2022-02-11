@@ -1,7 +1,3 @@
-# launch unity
-super + {u, U}
-	$HOME/Downloads/UnityHub.AppImage
-
 # launch firefox
 super + {b, B}
 	firefox
@@ -91,7 +87,7 @@ alt + shift + Right
 
 # hide-unhide focused window
 super + {h, H}
-	$HOME/.local/bin/winhide
+	$HOME/.config/bspwm/sxhkd/winhide
 
 # resize windows
 super + alt + {h,j,k,l}
