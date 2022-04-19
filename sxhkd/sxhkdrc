@@ -1,6 +1,6 @@
 # launch firefox
 super + {b, B}
-	firefox
+	brave
 
 # launch thunar 
 super + {f, F}
@@ -71,7 +71,7 @@ super + shift + {1-9,0}
 
 # launch code
 super + {c, C}
-	subl
+	/home/george/Downloads/VSCode-linux-x64/bin/code
 
 # launch discord
 super + {d, D}
@@ -99,3 +99,7 @@ super + alt + shift + {h,j,k,l}
 # launch steam
 super + {s, S}
 	steam
+
+# launch vim
+super + {v, V}
+	vim
