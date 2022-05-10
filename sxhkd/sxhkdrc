@@ -6,7 +6,7 @@ super + {b, B}
 
 # LunarVim
 super + {v, V}
-    alacritty --command lvim 
+    alacritty -e /home/george/.local/bin/lvim 
 
 # Thunar
 super + {f, F}
