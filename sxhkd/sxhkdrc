@@ -10,7 +10,7 @@ super + {v, V}
 
 # Thunar
 super + {f, F}
-    thunar
+    alacritty -e ranger
 
 # Spotify
 super + {m, M}
@@ -110,3 +110,10 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
     ~/.config/bspwm/sxhkd/resize contract {west,south,north,east} 50
 
+# Manual tiling
+super + ctrl + {Left, Down, Up, Right}
+    bspc node -p {west, south, north, east}
+
+# Cancel Manual tiling
+super + ctrl + space
+  bspc node -p cancel
